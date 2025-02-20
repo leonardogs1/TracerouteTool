@@ -14,8 +14,9 @@ This project implements a traceroute utility in Python using the Scapy library. 
 1. **Clone the Repository:**
 
    ```bash
-   git clone [https://github.com/](https://github.com/)<your_username>/<your_repo_name>.git  # Replace with your repo details
-   cd <your_repo_name>
+   git clone git@github.com:leonardogs1/TracerouteTool.git
+   cd TracerouteTool
+   ```
 
 2. **Install Dependencies**
     ```bash
