@@ -46,7 +46,6 @@ def traceroute(dest_ip: str, max_hop: int) -> None:
         end = perf_counter()
         rtt = end - start
 
-
         if reply:
             if reply.haslayer(ICMP):
                  # Case 1 & 2: Time Exceeded or Destination Unreachable
@@ -56,7 +55,6 @@ def traceroute(dest_ip: str, max_hop: int) -> None:
                 else:
                     print(f"{ttl} ICMP type: {reply[ICMP].type}")
                     return
-                
             else:
                 print(f"{ttl} Unexpected packet: {reply.summary()}")
                 return
@@ -65,7 +63,6 @@ def traceroute(dest_ip: str, max_hop: int) -> None:
             reply_ip = "***"
         
         output_table.add_row([ttl, reply_ip, f"{rtt:.4f} ms", host])  
-
         ttl += 1
         
     
@@ -79,7 +76,7 @@ if __name__ == "__main__":
         print(f"Error: Could not resolve hostname {destination}")
         exit(1)
     
-    # Get maximum hops input; if empty, set to 64
+    # Get maximum hops input; if empty or invalid , set to 64
     max_hops = input("Enter maximum number of hops (default: 64): ")
     if max_hops.strip() == "":
         max_hops = 64
