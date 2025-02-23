@@ -22,7 +22,7 @@ This project implements a traceroute utility in Python using the Scapy library. 
     ```bash
     python3 -m venv .venv  # create virtual env
     source .venv/bin/activate # activate virtual env
-    pip install scapy
+    pip install -r requirements.txt
     ```
 
 3. **Run Script**
