@@ -20,8 +20,6 @@ This project implements a traceroute utility in Python using the Scapy library. 
 
 2. **Install Dependencies**
     ```bash
-    pip install scapy
-    # or, if you are using a virtual environment:
     python3 -m venv .venv  # create virtual env
     source .venv/bin/activate # activate virtual env
     pip install scapy
